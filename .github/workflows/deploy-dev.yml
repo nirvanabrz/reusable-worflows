@@ -1,0 +1,24 @@
+name: "Dev Deploy"
+
+on:
+  workflow_call:
+    inputs:
+      target-branch:
+        description: 'Branch de destino'
+        required: false
+        type: string
+      custom-body:
+          description: 'texto padrao para impressao ao executar o step/job'
+          required: false
+          type: string
+  
+jobs:     
+  deploy-aks:
+    runs-on: ubuntu-latest
+    environment: 
+      name: dev
+      url: 'https://mendespedrosa.com.br'
+    steps:
+      - name: "Listando Repo"
+        run: pwd; ls 
+

@@ -1,0 +1,20 @@
+name: "HML Deploy"
+
+on:
+  workflow_call:
+
+jobs:
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Hello world
+  #       run: echo Hello world!
+        
+  deploy:
+    runs-on: ubuntu-latest
+    environment: 
+      name: hml
+      url: 'https://mendespedrosa.com.br'
+    steps:
+      - name: Hello world
+        run: echo Hello world! - HML
